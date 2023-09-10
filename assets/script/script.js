@@ -8,9 +8,15 @@ const mainFnc = (link) =>{
 
     console.log(toRedirectURL); // it works :D
 
-    // redirect
-    window.open(toRedirectURL, '_blank');
+    // URL validation
+    const regex = /medium\.com/;
+    const userURL = link;
 
+    if(!regex.test(userURL)){
+        alert("Invalid URL!!! i guess... hehe");
+    }else{
+        window.open(toRedirectURL, '_blank');
+    };
 };
 
 button.addEventListener('click', function() {
